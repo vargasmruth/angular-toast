@@ -11,11 +11,23 @@ export class ToastWithServiceComponent implements OnInit {
 
   constructor(private toastService: ToastService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   showSuccess() {
-    this.toastService.showSuccess('todo', 'ok');
+    this.toastService.showSuccess('showSuccess', 'Success');
+  }
+
+  showError() {
+    this.toastService.showError('showError', 'Error');
+  }
+  showWarning() {
+    this.toastService.showWarning('showWarning', 'Warning');
+  }
+  showInfo() {
+    this.toastService.showInfo('showInfo', 'Info');
+  }
+  showCustom() {
+    this.toastService.showCustom('showCustom', 'Custom');
   }
 
 }
